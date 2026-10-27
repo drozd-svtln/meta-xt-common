@@ -3,14 +3,14 @@ LICENSE = "GPL-2.0-only"
 RDEPENDS:${PN} = "qemu-system-native"
 PR = "r1"
 
-LIC_FILES_CHKSUM = "file://${UNPACKDIR}/tunctl.c;endline=4;md5=ff3a09996bc5fff6bc5d4e0b4c28f999"
+LIC_FILES_CHKSUM = "file://tunctl.c;endline=4;md5=ff3a09996bc5fff6bc5d4e0b4c28f999"
 
 SRC_URI = "\
     file://tunctl.c \
     file://qemu-oe-bridge-helper \
     "
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 inherit native
 
