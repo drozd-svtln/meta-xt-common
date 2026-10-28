@@ -6,7 +6,7 @@ DEPENDS = "glib-2.0 zlib pixman bison-native ninja-native meson-native"
 
 DEPENDS:append:libc-musl = " libucontext"
 
-CFLAGS += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', '-DEGL_NO_X11=1', d)}"
+CFLAGS:append:class-target = "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', '-DEGL_NO_X11=1', d)}"
 
 RDEPENDS:${PN}:class-target += "bash"
 
